@@ -5,10 +5,10 @@ export interface MultiStepProps {
   currentStep?: number
 }
 
-export function MultiStep({
+const MultiStep = ({
   size,
   currentStep = 1,
-}: MultiStepProps) {
+}: MultiStepProps) => {
   return (
     <MultiStepContainer>
       <Label>Passo {currentStep} de {size}</Label>
@@ -20,3 +20,5 @@ export function MultiStep({
     </MultiStepContainer>
   )
 }
+
+MultiStep.displayName = 'MultiStep'

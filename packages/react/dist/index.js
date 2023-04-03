@@ -64,7 +64,6 @@ __export(src_exports, {
   Button: () => Button,
   Checkbox: () => Checkbox2,
   Heading: () => Heading,
-  MultiStep: () => MultiStep,
   Text: () => Text,
   TextArea: () => TextArea,
   TextInput: () => TextInput
@@ -180,6 +179,7 @@ var Box = styled("div", {
   backgroundColor: "$gray800",
   border: "1px solid $gray600"
 });
+Box.displayName = "Box";
 
 // src/components/Text.tsx
 var Text = styled("p", {
@@ -208,6 +208,7 @@ var Text = styled("p", {
     size: "md"
   }
 });
+Text.displayName = "Text";
 
 // src/components/Heading.tsx
 var Heading = styled("h2", {
@@ -231,6 +232,7 @@ var Heading = styled("h2", {
     size: "sm"
   }
 });
+Heading.displayName = "Heading";
 
 // src/components/Avatar/index.tsx
 var import_phosphor_react = require("phosphor-react");
@@ -266,12 +268,13 @@ var AvatarFallback = styled(Avatar.Fallback, {
 
 // src/components/Avatar/index.tsx
 var import_jsx_runtime = require("react/jsx-runtime");
-function Avatar2(props) {
+var Avatar2 = (props) => {
   return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(AvatarContainer, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AvatarImage, __spreadValues({}, props)),
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_phosphor_react.User, {}) })
   ] });
-}
+};
+Avatar2.displayName = "Avatar";
 
 // src/components/Button.tsx
 var Button = styled("button", {
@@ -345,6 +348,7 @@ var Button = styled("button", {
     size: "md"
   }
 });
+Button.displayName = "Button";
 
 // src/components/TextInput/styles.ts
 var TextInputContainer = styled("div", {
@@ -397,6 +401,7 @@ function TextInput(_a) {
     /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Input, __spreadValues({}, props))
   ] });
 }
+TextInput.displayName = "TextInput";
 
 // src/components/TextArea.tsx
 var TextArea = styled("textarea", {
@@ -424,6 +429,7 @@ var TextArea = styled("textarea", {
     color: "$gray400"
   }
 });
+TextArea.displayName = "TextArea";
 
 // src/components/Checkbox/index.tsx
 var import_phosphor_react2 = require("phosphor-react");
@@ -484,6 +490,7 @@ var import_jsx_runtime3 = require("react/jsx-runtime");
 var Checkbox2 = (props) => {
   return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_phosphor_react2.Check, { weight: "bold" }) }) }));
 };
+Checkbox2.displayName = "Checkbox";
 
 // src/components/MultiStep/styles.ts
 var MultiStepContainer = styled("div", {});
@@ -514,10 +521,10 @@ var Step = styled("div", {
 
 // src/components/MultiStep/index.tsx
 var import_jsx_runtime4 = require("react/jsx-runtime");
-function MultiStep({
+var MultiStep = ({
   size,
   currentStep = 1
-}) {
+}) => {
   return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(MultiStepContainer, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Label, { children: [
       "Passo ",
@@ -527,7 +534,8 @@ function MultiStep({
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Step, { active: currentStep >= step }, step)) })
   ] });
-}
+};
+MultiStep.displayName = "MultiStep";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -535,7 +543,6 @@ function MultiStep({
   Button,
   Checkbox,
   Heading,
-  MultiStep,
   Text,
   TextArea,
   TextInput
