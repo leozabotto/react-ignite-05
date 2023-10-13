@@ -22,3 +22,5 @@ const MultiStep = ({
 }
 
 MultiStep.displayName = 'MultiStep'
+
+export { MultiStep }
