@@ -2,6 +2,7 @@ import * as _stitches_react_types_styled_component from '@stitches/react/types/s
 import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
 import * as react from 'react';
 import { ComponentProps, ElementType } from 'react';
+import * as react_jsx_runtime from 'react/jsx-runtime';
 import * as Avatar$1 from '@radix-ui/react-avatar';
 import { ComponentProps as ComponentProps$1 } from '@stitches/react';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
@@ -834,7 +835,7 @@ declare const AvatarImage: _stitches_react_types_styled_component.StyledComponen
 interface AvatarProps extends ComponentProps$1<typeof AvatarImage> {
 }
 declare const Avatar: {
-    (props: AvatarProps): JSX.Element;
+    (props: AvatarProps): react_jsx_runtime.JSX.Element;
     displayName: string;
 };
 
@@ -1253,7 +1254,7 @@ declare const Input: _stitches_react_types_styled_component.StyledComponent<"inp
 interface TextInputProps extends ComponentProps<typeof Input> {
     prefix?: string;
 }
-declare function TextInput({ prefix, ...props }: TextInputProps): JSX.Element;
+declare function TextInput({ prefix, ...props }: TextInputProps): react_jsx_runtime.JSX.Element;
 declare namespace TextInput {
     var displayName: string;
 }
@@ -1669,7 +1670,7 @@ declare const CheckboxContainer: _stitches_react_types_styled_component.StyledCo
 interface CheckboxProps extends ComponentProps<typeof CheckboxContainer> {
 }
 declare const Checkbox: {
-    (props: CheckboxProps): JSX.Element;
+    (props: CheckboxProps): react_jsx_runtime.JSX.Element;
     displayName: string;
 };
 
@@ -1677,5 +1678,9 @@ interface MultiStepProps {
     size: number;
     currentStep?: number;
 }
+declare const MultiStep: {
+    ({ size, currentStep, }: MultiStepProps): react_jsx_runtime.JSX.Element;
+    displayName: string;
+};
 
-export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps };
+export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps };
