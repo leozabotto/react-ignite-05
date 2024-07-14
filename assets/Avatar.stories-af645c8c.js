@@ -1,0 +1,2 @@
+import{A as t}from"./index-8461f56c.js";import"./index-ea811418.js";import"./iframe-8026fcf8.js";import"./index-20213a4b.js";import"./jsx-runtime-37aa87fc.js";const p={title:"Data display/Avatar",component:t,args:{src:"https://github.com/leozabotto.png",alt:"Leonardo Zabotto"},argTypes:{src:{control:{type:"text"}}}},c={},e={args:{src:void 0}},m=["Primary","WithFallback"];export{c as Primary,e as WithFallback,m as __namedExportsOrder,p as default};
+//# sourceMappingURL=Avatar.stories-af645c8c.js.map
