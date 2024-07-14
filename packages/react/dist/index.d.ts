@@ -1677,5 +1677,9 @@ interface MultiStepProps {
     size: number;
     currentStep?: number;
 }
+declare const MultiStep: {
+    ({ size, currentStep, }: MultiStepProps): JSX.Element;
+    displayName: string;
+};
 
-export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps };
+export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps };
