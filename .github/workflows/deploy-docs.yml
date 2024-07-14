@@ -18,6 +18,9 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+        env:
+          TURBO_TOKEN: HRK9EDPL6W3jtjypNQrApK0T
+          TURBO_TEAM: leonardo-zabotto-lessas-projects
 
       - name: Deploy storybook
         working-directory: ./packages/docs
